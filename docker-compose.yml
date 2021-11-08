@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  mycassandra:
+    image: cassandra:latest
+  jupyter:
+    build: ./jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/home/jovyan/work
